@@ -1,6 +1,6 @@
 <template>
-	<div class="mt-8 flex items-center justify-center">
-		<div class="w-1/2">
+	<div class="mt-8 mx-auto flex items-center justify-center">
+		<div class="w-full">
 			<p class="mt-2 text-center text-xl font-semibold text-white md:text-2xl lg:text-3xl">
 				Llevo en hormonas
 				<span class="font-bold text-emerald-400"> {{ daysElapsed }} días</span> y

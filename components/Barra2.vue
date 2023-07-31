@@ -1,12 +1,12 @@
 <template>
 	<div class="mt-10  mb-16 flex h-[10%] items-center justify-center">
-		<div class="w-1/2">
+		<div class="w-full">
 			<div class="flex justify-center mb-4">
-				<h1 class="mb-4 whitespace-nowrap text-center text-xl text-white md:text-2xl">
+				<h1 class="mb-4 whitespace-nowrap text-center text-lg text-white md:text-2xl">
 					<span class="inline-block rounded-2xl bg-black/5 px-4 py-4 font-semibold text-white ring-1 ring-sky-400"><span class="text-white font-bold">Inicio <span class="text-sky-400">(1-6 meses)</span></span><br /> <br />Redistribución grasa corporal  <br /> Piel más seca y suave  <br /> Disminución deseo sexual  <br /> Disminución de erecciones espontáneas  <br /> Disminución massa muscular/fuerza  </span>
 				</h1>
 			</div>
-			<div class="relative h-4 w-full overflow-hidden rounded-full bg-white">
+			<div class="relative h-4 w-1/2 mx-auto overflow-hidden rounded-full bg-white">
 				<div class="animate-stripes absolute left-0 top-0 h-full rounded-lg bg-sky-400" :style="{ width: progressWidth }"></div>
 			</div>
 			<p class="mt-2 text-center text-2xl font-semibold text-white">
@@ -14,10 +14,10 @@
 				>{{ progressWithDecimals.slice(-9) }}
 				<span class="font-bold text-sky-400"> %</span>
 			</p>
-			<p v-if="iniciado && !finalizado" class="mt-2 text-center text-2xl font-semibold text-white">
+			<p v-if="iniciado && !finalizado" class="mt-2 text-center text-xl md:text-2xl font-semibold text-white">
 				<span  class="font-bold text-sky-400">{{ daysRemaining }} días</span> restantes
 			</p>
-			<p v-else-if="!iniciado && !finalizado" class="mt-2 text-center text-2xl font-semibold text-white">
+			<p v-else-if="!iniciado && !finalizado" class="mt-2 text-center text-xl md:text-2xl font-semibold text-white">
 				<span  class="font-bold text-sky-400">{{ startDaysRemaining }} días</span> para empezar
 			</p>
 		</div>
