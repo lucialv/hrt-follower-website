@@ -45,7 +45,7 @@ const updateProgress = () => {
 	if (currentTime >= endDate) {
 		progressWidth.value = '100%';
 		progress.value = 100;
-		progressWithDecimals.value = progress.value.toFixed(8);
+		progressWithDecimals.value = progress.value.toFixed(2);
 		daysRemaining.value = 0;
 		return;
 	}
@@ -71,7 +71,7 @@ const updateProgress = () => {
 	totalHoursElapsed.value = elapsedTotalHours;
 	totalMinutesElapsed.value = totalMinutes;
 	blinkCount.value = blinkCountTotal;
-	progressWithDecimals.value = progress.value.toFixed(8);
+	progressWithDecimals.value = progress.value.toFixed(2);
 	daysRemaining.value = remainingDays;
 	requestAnimationFrame(updateProgress);
 };

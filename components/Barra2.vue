@@ -10,8 +10,8 @@
 				<div class="animate-stripes absolute left-0 top-0 h-full rounded-lg bg-sky-400" :style="{ width: progressWidth }"></div>
 			</div>
 			<p class="mt-2 text-center text-2xl font-semibold text-white">
-				<span class="font-bold text-sky-400">{{ progressWithDecimals.slice(0, -9) }}</span
-				>{{ progressWithDecimals.slice(-9) }}
+				<span class="font-bold text-sky-400">{{ progressWithDecimals.slice(0, -3) }}</span
+				>{{ progressWithDecimals.slice(-3) }}
 				<span class="font-bold text-sky-400"> %</span>
 			</p>
 			<p v-if="iniciado && !finalizado" class="mt-2 text-center text-xl md:text-2xl font-semibold text-white">
@@ -72,7 +72,7 @@ const updateProgress = () => {
 	const currentProgress = Math.min(100, (elapsed / totalTime) * 100);
 	progressWidth.value = `${currentProgress}%`;
 	progress.value = currentProgress;
-	progressWithDecimals.value = progress.value.toFixed(8);
+	progressWithDecimals.value = progress.value.toFixed(2);
 	daysRemaining.value = remainingDays;
 	requestAnimationFrame(updateProgress);
 };
